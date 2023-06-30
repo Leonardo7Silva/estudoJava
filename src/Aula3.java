@@ -7,6 +7,7 @@ public class Aula3 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
+        /*
         //Exercicios
         System.out.println("Digite um Número:");
 
@@ -46,8 +47,44 @@ public class Aula3 {
             linha = "";
         }while (aux2 <= num);
 
+        */
+
+        int[] pares = {2,4,6,8,9};
+
+        boolean resultado = findTheNumber(pares, 3);
+
+        System.out.println(resultado);
 
 
 
-    }
+    };
+
+    public static int sumAllElements(int[] arr){
+        int aux = 0;
+        for(int i = 0; i< arr.length; i++){
+            aux += arr[i];
+        };
+        return aux;
+    };
+
+    public static int findTheBiggest(int[] arr){
+       int aux = -10000;
+        for(int i = 0; i< arr.length; i++){
+            if(arr[i]> aux){
+                aux = arr[i];
+            };
+        };
+        return aux;
+    };
+
+    public static boolean findTheNumber(int[] arr, int d){
+        for(int i = 0; i< arr.length; i++){
+            if(arr[i] == d){
+                return true;
+            };
+        };
+        return false;
+    };
+
+
 }
